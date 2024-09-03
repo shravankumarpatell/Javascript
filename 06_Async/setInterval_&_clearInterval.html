@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>Chai aur JS</h1>
+    <button id="stop">Stop</button>
+    <button id="start"> Start</button>
+</body>
+<script>
+    // setInterval(function() {
+    //     console.log("hitesh", Date.now())
+    // }, 2000)
+
+    const saydate = function (str){
+        console.log(str, Date.now());
+    }
+
+    let intervalId = 0;
+
+    document.querySelector('#start').addEventListener('click', function(){
+        intervalId =  setInterval(saydate, 2000, "SKP");
+    })
+    
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(intervalId)
+    })
+
+    
+</script>
+</html>

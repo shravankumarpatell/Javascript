@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Object Model (DOM)</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div class="parent">
+        <!-- this the comment -->
+       <div class="days">Monday</div>
+       <div class="days">tuesday</div>
+       <div class="days">wednesday</div>
+       <div class="days">thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children)
+    // console.log(parent.children[1])
+    // console.log(parent.children[1].innerHTML)
+    console.log(parent.children[1].innerHTML = "holiday")
+    
+    // console.log("for loop")
+    // for (let index = 0; index < parent.children.length; index++) {
+    //    console.log(parent.children[index].innerHTML)  
+    // }
+    parent.children[2].style.color = "orange"
+    
+    
+    // console.log("firstElementChild and lastElementChild")
+    // console.log(parent.firstElementChild)
+    // console.log(parent.lastElementChild)
+
+    const dayone = document.querySelector('.days')
+    // console.log(dayone)
+    // console.log(dayone.parentElement)
+    // console.log(dayone.nextElementSibling) 
+
+    console.log("NODES: ", parent.childNodes)
+</script>
+</html>
